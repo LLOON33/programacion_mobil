@@ -9,3 +9,7 @@ npm install --save @ionic/storage
 para lograr que el programa funcione correctamente es necesario instalar lo siguiente:
 
 npm install firebase npm install @angular/fire firebase --save
+
+
+
+integrante: juan marquez
