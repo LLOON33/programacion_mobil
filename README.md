@@ -43,3 +43,4 @@ Herramientas Utilizadas en el proyecto
 
 integrante: juan marquez
 
+# Soldadura
