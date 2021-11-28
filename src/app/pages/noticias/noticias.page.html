@@ -1,18 +1,23 @@
 <ion-header class="ion-no-border">
-  <ion-toolbar color="dark">
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Noticias Actuales "A soldar"</ion-title>   
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content color="dark">
+<ion-content>
 
     <ion-grid fixed>
       <ion-row>
         <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
                   *ngFor ="let noticia of noticias; let i= index">
 
-            <ion-card  color="dark">
+            <ion-card>
               <ion-card-header>
                 <ion-card-subtitle>
                     <span class="text">{{i + 1 }}</span>

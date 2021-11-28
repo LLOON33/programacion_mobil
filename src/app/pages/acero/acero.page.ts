@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-acero',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AceroPage implements OnInit {
 
-  constructor() { }
+  constructor(private menuController: MenuController) { }
 
-  ngOnInit() {
+  ngOnInit() { 
   }
-
+  mostrarMenu(){
+    this.menuController.open('first');
+  }
 }

@@ -19,6 +19,12 @@ export class AppComponent {
 
   componentes : Componente[] =[
     {
+      icon: "home-outline",
+      name: "Inicio",
+      redirecTo: "/inicio"
+    },
+
+    {
       icon: "cube-outline",
       name: "Tipos De Acero",
       redirecTo: "/acero"

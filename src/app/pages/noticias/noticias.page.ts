@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NoticiasService } from 'src/app/services/noticias.service';
+import { MenuController } from '@ionic/angular';
 import {Article} from '../../interfaces/interfaces';
 @Component({
   selector: 'app-noticias',
@@ -11,7 +12,8 @@ export class NoticiasPage implements OnInit {
 
   noticias: Article[] = []
   
-  constructor(private noticiasService:NoticiasService) { }
+  constructor(private noticiasService:NoticiasService,
+    private menuController: MenuController) { }
 
   ngOnInit() 
   {
@@ -20,4 +22,7 @@ export class NoticiasPage implements OnInit {
       this.noticias.push(...resp.articles);
     });
   }
+  mostrarMenu(){
+    this.menuController.open('first');}
+  
 }

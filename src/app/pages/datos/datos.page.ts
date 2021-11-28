@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ServicedatosService, Datos } from 'src/app/services/servicedatos.service';
 import { Platform, ToastController, IonList} from '@ionic/angular';
+import { MenuController } from '@ionic/angular';
 
 
 @Component({
@@ -18,6 +19,7 @@ export class DatosPage implements OnInit {
 
 
   constructor(private storageService: ServicedatosService, 
+    private menuController: MenuController,
     private plt: Platform, private toastController: ToastController) {
       this.plt.ready().then(()=>{
         this.loadDatos();
@@ -25,6 +27,10 @@ export class DatosPage implements OnInit {
     }
 
   ngOnInit() {
+  }
+
+  mostrarMenu(){
+    this.menuController.open('first');
   }
 
   loadDatos(){
@@ -68,4 +74,5 @@ export class DatosPage implements OnInit {
       this.loadDatos();
     });
   }
+  
 }

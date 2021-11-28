@@ -1,12 +1,11 @@
 <ion-header>
   <ion-toolbar>
 
-    <ion-buttons slot="end">
-      <ion-back-button defaultHref="/"
-        text= "volver"
-        color= "primary"
-        mode= "ios">
-     </ion-back-button>
+
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
     </ion-buttons>
 
     <ion-title>Tipos de Soldaduras</ion-title>
